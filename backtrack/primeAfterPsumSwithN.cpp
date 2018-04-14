@@ -45,6 +45,8 @@ int main(){
 
 	//Call recursive backtrack function
 	primeSumPrint(N,S,primes,answer,0,0);
+
+	printf("this is for testing purposes\n");
 	
 	return 0;
 }
