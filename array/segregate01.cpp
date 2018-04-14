@@ -4,6 +4,21 @@
 
 using namespace std;
 
+void count(int* arr, int size){
+
+	int zero=0;
+
+	for(int i=0;i<size;i++) if(!arr[i]) zero++;
+
+	for(int i=0;i<size;i++){
+		if(zero-->0) arr[i]=0;
+		else arr[i]=1;
+	}
+
+	for(int i=0;i<size;i++) printf("%3d",arr[i]);
+	printf("\n");
+}
+
 void indexes(int* arr, int size){
 	int zeroInd=0;
 	int oneInd=size-1;
@@ -28,6 +43,7 @@ int main(){
 	for(int i=0;i<total;i++)scanf("%d",&arr[i]);
 
 	indexes(arr,total);
-	
+	count(arr,total);
+
 	return 0;
 }
